@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: rgb(236, 239, 241);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/* NAVBAR - Modern Version */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    background: #2c3e50;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+/* NAVBAR - Modern & Interactive */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+    background: #2c3e50;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Slight scale-up on hover */
+.nav-links a:hover {
+    transform: scale(1.05);
+}
+
+/* Active link - subtle background, bright font */
+.nav-links a.active {
+    background: transparent;
+    color: white; /* font stays bright */
+}
+
+
+/* Hover for active link */
+.nav-links a.active:hover {
+   
+    color: white;
+}
+
+/* Press-down effect */
+.nav-links a:active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #2c3e50;
+        padding: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        gap: 15px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3498db;
+}
+*/
+main {
+    min-height: calc(100vh - 180px);
+}
+
+.hero {
+    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%233498db" width="1200" height="600"/></svg>');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+
+
+
+    /* Responsive image styling */
+    .hero img {
+      max-width: 100%;   /* scales down to fit parent */
+      height: auto;      /* keeps aspect ratio */
+      border-radius: 10px; /* optional rounded corners */
+    }
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: white;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #ecf0f1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.welcome-section {
+    padding: 4rem 2rem;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.lead {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #555;
+}
+
+.service-times {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.time-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.time-card h3 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.time-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.page-header {
+    background: #3498db;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.content-section {
+text-align: center;
+    padding: 4rem 2rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+.about-grid > * {
+    border-bottom: 1px solid #ccc;  /* light gray line between rows */
+    padding-bottom: 2rem;          /* spacing below content */
+    margin-bottom: 2rem;           /* space between rows */
+}
+/* Remove border from the last row */
+.about-grid > *:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.about-content h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    line-height: 1.8;
+}
+
+.sermons-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.sermon-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.front-image {
+    width: 100%;
+    height: 500px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.front-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pastor-image {
+    width: 100%;
+    height: 400px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pastor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-image {
+    width: 100%;
+    height: 400px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.sermon-text h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.sermon-text p {
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.youtube-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.youtube-btn:hover {
+    background: #cc0000;
+}
+
+.sermon-card {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #3498db;
+}
+
+.sermon-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.sermon-meta {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.sermon-card p {
+    line-height: 1.8;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-card h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    line-height: 1.8;
+}
+
+footer {
+    background: #117eec;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+   
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .welcome-section h2,
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .service-times,
+    .services-grid,
+    .about-grid,
+    .contact-info-grid,
+    .sermon-intro,
+    .contact-layout,
+    .contact-wrapper,
+    .contact-grid-main {
+        grid-template-columns: 1fr;
+    }
+
+    .pastor-image,
+    .church-image {
+        height: 300px;
+    }
+
+    .page-header-contact h1 {
+        font-size: 2rem;
+    }
+}
+/* --- MOBILE NAVIGATION FIX (does not change any colors) --- 
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* When screen is small 
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul.nav-links {
+        display: none;           /* Hide menu only until clicked 
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: inherit;     /* Keeps your existing background color 
+        padding: 15px;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav ul.nav-links.active {
+        display: flex;           /* Show menu when hamburger clicked 
+    }
+}*/
