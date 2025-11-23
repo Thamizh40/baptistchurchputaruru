@@ -1,0 +1,86 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Grace Community Church</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+ 
+  <nav>
+    <div class="logo">Putaruru Baptist Church Family</div>
+
+     <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Our Services</h1>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Sunday Worship</h3>
+                        <p>Join us for inspiring worship services featuring contemporary music, powerful biblical teaching, and meaningful fellowship. Services at 9:00 AM and 11:00 AM.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Youth Ministry</h3>
+                        <p>Dynamic programs for teens and young adults to grow in faith, build friendships, and discover their purpose through engaging activities and mentorship.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Community Outreach</h3>
+                        <p>Making a tangible difference through food drives, charity events, and volunteer opportunities that serve those in need within our community.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Bible Study</h3>
+                        <p>Weekly small group sessions that explore scripture in depth, foster meaningful discussions, and help apply biblical wisdom to everyday life.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Children's Ministry</h3>
+                        <p>Safe, fun, and engaging programs for children from nursery through elementary school, teaching biblical values through creative activities and stories.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Prayer Ministry</h3>
+                        <p>Dedicated prayer teams available to pray with you, provide spiritual support during challenges, and celebrate your victories in faith.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Grace Community Church. All rights reserved.</p>
+    </footer>
+     <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("open");
+    }
+  </script>
+
+  <script>
+    // Highlight the clicked nav link
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      link.addEventListener("click", function() {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
