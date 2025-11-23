@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Grace Community Church</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+ 
+  <nav>
+    <div class="logo">Putaruru Baptist Church Family</div>
+
+     <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+
+
+    </header>
+
+    <main>
+        <section class="hero">
+           <!--  <div class="hero-content">
+                 <div class="front-image">
+                        <img src="images/ch311.jpg" alt="front-image">
+                    </div>-->
+                    <picture>
+    <!-- Mobile version -->
+    <source media="(max-width: 600px)" srcset="images/ch3001.jpg">
+    <!-- Default / larger screens -->
+    <img src="images/ch311.jpg" alt="Front Image">
+  
+                <h1>Welcome to Grace Community Church</h1>
+                <p>A place of worship, fellowship, and spiritual growth</p>
+                <a href="about.html" class="btn">Learn More About Us</a>
+            </div>
+        </section>
+
+        <section class="welcome-section">
+            <div class="container">
+                <h2>Join Us This Sunday</h2>
+                <p class="lead">Experience inspiring worship and meaningful connections in a warm, welcoming environment.</p>
+                <div class="service-times">
+                    <div class="time-card">
+                        <h3>Morning Service</h3>
+                        <p>Sunday 10:30 AM</p>
+                         <p>52 Arapuni Street Putaruru</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Grace Community Church. All rights reserved.</p>
+    </footer>
+   
+
+  <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("open");
+    }
+  </script>
+
+  <script>
+    // Highlight the clicked nav link
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      link.addEventListener("click", function() {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+</html>
