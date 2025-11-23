@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Grace Community Church</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+ 
+  <nav>
+    <div class="logo">Putaruru Baptist Church Family</div>
+
+     <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </nav>
+
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Recent Sermons</h1>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="sermon-intro">
+                    <div class="pastor-image">
+                        <img src="images/markus.png" alt="Pastor preaching">
+                    </div>
+                    <div class="sermon-text">
+                        <h2>Weekly Messages</h2>
+                        <p>Listen to our inspiring sermons and teachings that help you grow in faith and understanding. Our pastors share biblical wisdom and practical guidance for daily living.</p>
+                        <a href="https://www.youtube.com/@yourchurchchannel" target="_blank" class="youtube-btn">Visit Our YouTube Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Grace Community Church. All rights reserved.</p>
+    </footer>
+     <script>
+    // Hamburger toggle
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("open");
+    }
+  </script>
+
+  <script>
+    // Highlight the clicked nav link
+    const links = document.querySelectorAll(".nav-links a");
+    links.forEach(link => {
+      link.addEventListener("click", function() {
+        links.forEach(l => l.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
