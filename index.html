@@ -1,54 +1,81 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Putaruru Baptist Church</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
- 
-  <nav>
-    <div class="logo">Putaruru Baptist Church Family</div>
 
-     <ul class="nav-links">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Putaruru Baptist Church</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <div class="logo">Putaruru Baptist Church Family</div>
+
+      <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="sermons.html">Sermons</a></li>
         <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </nav>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
 
 
 
-    </header>
+  </header>
 
-    <main>
-      <section class="hero">
-  <picture>
-      <!-- Mobile version -->
-      <source media="(max-width: 600px)" srcset="images/chfn1s.jpg">
-      <!-- Default / desktop -->
-      <img src="images/chfn1l.jpg" alt="Front Image">
-  </picture>
+  <main>
+    <section class="hero">
+      <picture>
+        <!-- Mobile version -->
+        <source media="(max-width: 600px)" srcset="images/chfn1s.jpg">
+        <!-- Default / desktop -->
+        <img src="images/chfn1l.jpg" alt="Front Image">
+      </picture>
 
-  <div class="hero-content">
-      <h1>Welcome to Putaruru Baptist Church</h1>
-      <p>A place of belonging, worship, fellowship, and spiritual growth.</p>
-      <a href="about.html" class="btn">Learn More About Us</a>
-  </div>
-</section>
+      <div class="hero-content">
+        <h1>Welcome to Putaruru Baptist Church</h1>
+        <p>A place of worship, fellowship, and spiritual growth.</p>
+        <a href="about.html" class="btn">Learn More About Us</a>
+      </div>
 
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Putaruru Baptist Church. All rights reserved.</p>
-    </footer>
-   
+    </section>
+    <section class="welcome-section">
+      <div class="container">
+        <h2>Join Us This Sunday</h2>
+        <p class="lead">Experience inspiring worship and meaningful connections in a warm, welcoming environment.</p>
+        <div class="service-times">
+          <div class="time-card">
+            <h3>Morning Service</h3>
+            <p>Sunday 10:30 AM</p>
+            <p>52 Arapuni Street Putaruru, New Zealand</p>
+          </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Putaruru Baptist Church</h3>
+        <p>A place of worship, fellowship, and spiritual growth.</p>
+      </div>
+     
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>Email: info@putarurubaptist.org</p>
+        <p>Phone: (07) 000 0000</p>
+        <p>Address: Putaruru, New Zealand</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Putaruru Baptist Church — All Rights Reserved</p>
+    </div>
+  </footer>
 
   <script>
     // Hamburger toggle
@@ -61,11 +88,12 @@
     // Highlight the clicked nav link
     const links = document.querySelectorAll(".nav-links a");
     links.forEach(link => {
-      link.addEventListener("click", function() {
+      link.addEventListener("click", function () {
         links.forEach(l => l.classList.remove("active"));
         this.classList.add("active");
       });
     });
   </script>
-  </body>
+</body>
+
 </html>
