@@ -1,71 +1,85 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home -  Putaruru Baptist Church</title>
+    <title>About Us - Putaruru Baptist Church</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
- 
-  <nav>
-    <div class="logo">Putaruru Baptist Church Family</div>
-
-     <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="sermons.html">Sermons</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-  </nav>
-
+        <nav>
+            <div class="logo">Putaruru Baptist Church Family</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="sermons.html">Sermons</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+    
     <main>
         <section class="page-header">
             <h1>About Us</h1>
         </section>
-
+        
         <section class="content-section">
             <div class="container">
                 <div class="about-grid">
-                    <div class="about-content">
+                    <!-- Our Story Section with Image -->
+                    <div class="about-content story-with-image">
                         <h2>Our Story</h2>
-                        <p>Grace Community Church has been a beacon of faith and hope in our community for over 25 years. Founded with a vision to create a welcoming space for all people to encounter God's love, we have grown into a diverse and vibrant congregation.</p>
-                        <p>Our journey began with a small group of believers who were passionate about making a difference. Today, we continue that mission with the same dedication and love that inspired our founding members.</p>
+                        <div class="story-layout">
+                            <div class="story-image">
+                                <img src="images/chold.jpg" alt="Putaruru Baptist Church History">
+                            </div>
+                            <div class="story-text">
+                                <p>Putaruru Baptist Church began as an outpost of the Morrinsville Baptist Church in 1929. A Sunday School was established in 1933. The Church was officially formed on 19 September, 1934, with 11 foundation members. The Church has been fulfilling its mission ever since, bringing the hope and good news of the gospel to the local community, and establishing an outpost in Rotorua in early 1949, as well as helping to establish Tokoroa Baptist Church at a later date. We are a charismatic, spirit filled, multi-cultural, multi-generational family of God.</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <!-- Our Mission Section -->
                     <div class="about-content">
                         <h2>Our Mission</h2>
-                        <p>We exist to help people discover and develop their relationship with God. Through worship, teaching, fellowship, and service, we aim to build a community that reflects Christ's love to the world.</p>
-                        <p>We believe that every person has inherent value and a unique purpose. Our goal is to help individuals find their place in God's story and live out their calling with passion and purpose.</p>
+                        <p>Loving our community and introducing it to the hope we have in Jesus Christ.</p>
+                    </div>
+                    
+                    <!-- Our Vision Section -->
+                    <div class="about-content">
+                        <h2>Our Vision</h2>
+                        <p>That all will come to know the saving power of Jesus Christ and the love of God the Father, and the fellowship of the Holy Spirit.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
-        <p>&copy; 2025  Putaruru Baptist Church. All rights reserved.</p>
+        <p>&copy; 2025 Putaruru Baptist Church. All rights reserved.</p>
     </footer>
-     <script>
-    // Hamburger toggle
-    function toggleMenu() {
-      document.querySelector(".nav-links").classList.toggle("open");
-    }
-  </script>
-
-  <script>
-    // Highlight the clicked nav link
-    const links = document.querySelectorAll(".nav-links a");
-    links.forEach(link => {
-      link.addEventListener("click", function() {
-        links.forEach(l => l.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  </script>
+    
+    <script>
+        // Hamburger toggle
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("open");
+        }
+    </script>
+    
+    <script>
+        // Highlight the clicked nav link
+        const links = document.querySelectorAll(".nav-links a");
+        links.forEach(link => {
+            link.addEventListener("click", function() {
+                links.forEach(l => l.classList.remove("active"));
+                this.classList.add("active");
+            });
+        });
+    </script>
 </body>
 </html>
+
 
