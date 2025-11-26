@@ -18,6 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #02165a;
 }
 
 main {
@@ -238,7 +239,12 @@ nav {
     text-align: center;
     padding: 1rem 1rem;
     background: #0F2143;
+    margin-bottom: 0;
+    flex: 1;   
+     flex-direction: column;
 }
+
+/* container*/
 
 /* ===================================
    ABOUT PAGE
@@ -348,7 +354,7 @@ nav {
 }
 
 .services-info {
-    background: #e6f2ff;
+    background: #B8BC86;
     text-align: center;
     padding: 40px 20px;
     margin-top: 40px;
@@ -363,6 +369,7 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .pastor-image {
@@ -394,35 +401,41 @@ nav {
     font-size: 1.5rem;
 }
 
-.sermons-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
 
 /* ===================================
    CONTACT PAGE
    =================================== */
 .contact-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem 1rem;
-    background: #102E51;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* centers children horizontally */
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background: #67788b;
+}
+
+.contact-image {
+  width: 100%;             /* ensures it spans full width */
+  display: flex;
+  justify-content: center; /* centers image horizontally */
 }
 
 .contact-image img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+  max-width: 100%;         /* scales down on small screens */
+  height: auto;            /* keeps aspect ratio */
+  margin-top: 20px;
+  margin-left: 40px;
+
 }
 
+
+
 .contact-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
     color: #f4f755;
+    margin-top: 20px;
 }
 
 .contact-info-grid {
@@ -456,8 +469,8 @@ nav {
 footer {
     background: #2a3d66;
     color: white;
-    padding: 40px 20px 20px;
-    margin-top: 40px;
+   padding-top: 2rem; 
+    margin-top: 0px;
 }
 
 .footer-container {
@@ -602,5 +615,4 @@ footer {
         gap: 2rem;
     }
 }
-
 
