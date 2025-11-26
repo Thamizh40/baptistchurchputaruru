@@ -1,57 +1,63 @@
+/* ===================================
+   GLOBAL RESET & BASE STYLES
+   =================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Georgia', serif;
     line-height: 1.6;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main {
+    flex: 1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===================================
+   HEADER & NAVIGATION
+   =================================== */
 header {
-    background: #2c3e50;
-    color: rgb(236, 239, 241);
-    padding: 1.5rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: #023E8A;
+    color: #eceff1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-/* NAVBAR - Modern Version */
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     position: relative;
-    background: #2c3e50;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-}
-/* NAVBAR - Modern & Interactive */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: relative;
-    background: #2c3e50;
-}
-
-.logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: white;
 }
 
-/* NAV LINKS */
 .nav-links {
     display: flex;
     gap: 25px;
     list-style: none;
+    font-size: 1.2rem;
 }
 
 .nav-links a {
@@ -63,7 +69,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Hover underline animation */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -79,32 +84,20 @@ nav {
     width: 100%;
 }
 
-/* Slight scale-up on hover */
 .nav-links a:hover {
     transform: scale(1.05);
 }
 
-/* Active link - subtle background, bright font */
 .nav-links a.active {
     background: transparent;
-    color: white; /* font stays bright */
-}
-
-
-/* Hover for active link */
-.nav-links a.active:hover {
-   
     color: white;
 }
 
-/* Press-down effect */
 .nav-links a:active {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
 }
 
-
-/* Hamburger icon */
 .hamburger {
     display: none;
     font-size: 28px;
@@ -112,107 +105,42 @@ nav {
     user-select: none;
 }
 
-/* MOBILE NAVIGATION */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #2c3e50;
-        padding: 20px;
-        width: 200px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        gap: 15px;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .nav-links.open {
-        display: flex;
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/*
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #3498db;
-}
-*/
-main {
-    min-height: calc(100vh - 180px);
-}
-
+/* ===================================
+   HERO SECTION
+   =================================== */
 .hero {
-    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(44, 62, 80, 0.8)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%233498db" width="1200" height="600"/></svg>');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 8rem 2rem;
+    width: 100%;
+}
+
+.hero picture,
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-content {
     text-align: center;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 2rem 1rem;
+    background: #02165a;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: #f4f755;
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #f4f755;
+    margin-bottom: 1.5rem;
 }
 
-
-
-
-    /* Responsive image styling */
-    .hero img {
-      max-width: 100%;   /* scales down to fit parent */
-      height: auto;      /* keeps aspect ratio */
-      border-radius: 10px; /* optional rounded corners */
-    }
+/* ===================================
+   BUTTONS
+   =================================== */
 .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
@@ -220,8 +148,8 @@ main {
     color: #2c3e50;
     text-decoration: none;
     border-radius: 8px;
-    transition: background 0.3s;
     font-weight: bold;
+    transition: background 0.3s;
     margin-top: 20px;
 }
 
@@ -229,12 +157,24 @@ main {
     background: #ecf0f1;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.youtube-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
 }
 
+.youtube-btn:hover {
+    background: #cc0000;
+}
+
+/* ===================================
+   WELCOME SECTION
+   =================================== */
 .welcome-section {
     padding: 4rem 2rem;
     background: #f8f9fa;
@@ -257,14 +197,13 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
 }
 
 .time-card {
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .time-card h3 {
@@ -277,86 +216,63 @@ main {
     color: #555;
 }
 
+/* ===================================
+   PAGE HEADER
+   =================================== */
 .page-header {
-    background: #3498db;
-    color: white;
-    padding: 4rem 2rem;
+    background: #90E0EF;
+    padding: 15px 20px;
     text-align: center;
+    color: #023E8A;
+    margin: 0;
 }
 
 .page-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0;
+    font-size: 1.8rem;
 }
 
-.page-header p {
-    font-size: 1.1rem;
-    opacity: 0.95;
-}
-
+/* ===================================
+   CONTENT SECTIONS
+   =================================== */
 .content-section {
-text-align: center;
-    padding: 4rem 2rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    background: #0F2143;
 }
 
+/* ===================================
+   ABOUT PAGE
+   =================================== */
 .about-grid {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
 }
+
 .about-grid > * {
-    border-bottom: 1px solid #ccc;  /* light gray line between rows */
-    padding-bottom: 2rem;          /* spacing below content */
-    margin-bottom: 2rem;           /* space between rows */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
-/* Remove border from the last row */
+
 .about-grid > *:last-child {
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
 .about-content h2 {
-    color: #ffffff;
+    color: white;
     margin-bottom: 1rem;
+
 }
 
 .about-content p {
     margin-bottom: 1rem;
     line-height: 1.8;
-}
+    color: white;
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-item {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.service-item h3 {
-    color: #3498db;
-    margin-bottom: 1rem;
-}
-
-.service-item p {
-    line-height: 1.8;
-}
-
-.sermons-list {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.sermon-intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
 }
 
 .front-image {
@@ -372,81 +288,142 @@ text-align: center;
     height: 100%;
     object-fit: cover;
 }
+/* Story with Image Layout */
+.story-with-image .story-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.story-image {
+    width: 100%;
+    min-width: 0;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-text p {
+    color: white;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Mobile Responsive - Stack vertically */
+@media (max-width: 768px) {
+    .story-with-image .story-layout {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* ===================================
+   SERVICES PAGE
+   =================================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    line-height: 1.8;
+}
+
+.services-info {
+    background: #e6f2ff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+/* ===================================
+   SERMONS PAGE
+   =================================== */
+.sermon-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
 .pastor-image {
     width: 100%;
-    height: 400px;
+    height: auto;
     background: #e0e0e0;
     border-radius: 8px;
     overflow: hidden;
+    min-width: 0;
 }
 
 .pastor-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.contact-image {
-    width: 100%;
-    height: 400px;
-    background: #e0e0e0;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
-    overflow: hidden;
-}
-.contact-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
-
 
 .sermon-text h2 {
-    color: #2c3e50;
+    color: white;
     margin-bottom: 1rem;
 }
 
 .sermon-text p {
     line-height: 1.8;
     margin-bottom: 2rem;
-}
-
-.youtube-btn {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    background: #ff0000;
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.youtube-btn:hover {
-    background: #cc0000;
+.sermons-list {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.sermon-card {
-    background: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-left: 4px solid #3498db;
+/* ===================================
+   CONTACT PAGE
+   =================================== */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background: #102E51;
 }
 
-.sermon-card h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
+.contact-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-.sermon-meta {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.sermon-card p {
-    line-height: 1.8;
+.contact-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f4f755;
 }
 
 .contact-info-grid {
@@ -459,7 +436,7 @@ text-align: center;
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -472,82 +449,109 @@ text-align: center;
     line-height: 1.8;
 }
 
+/* ===================================
+   FOOTER
+   =================================== */
 footer {
-    background: #117eec;
-    color: white;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+    background: #0077B6;
+    color: white;
+    margin-top: auto;
 }
-   
 
+/* ===================================
+   RESPONSIVE DESIGN - MOBILE
+   =================================== */
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
+    /* Navigation */
+    .hamburger {
+        display: block;
     }
 
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #2c3e50;
+        padding: 20px;
+        width: 200px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        gap: 15px;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-links.open {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Hero Section */
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero-content p {
         font-size: 1rem;
     }
 
-    .welcome-section h2,
-    .page-header h1 {
+    /* Welcome Section */
+    .welcome-section h2 {
         font-size: 2rem;
     }
 
-    .service-times,
-    .services-grid,
-    .about-grid,
-    .contact-info-grid,
-    .sermon-intro,
-    .contact-layout,
-    .contact-wrapper,
-    .contact-grid-main {
+    .service-times {
         grid-template-columns: 1fr;
     }
 
-    .pastor-image,
-    .church-image {
-        height: 300px;
+    /* Sermon Page */
+    .sermon-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .page-header-contact h1 {
-        font-size: 2rem;
+    .sermon-text p {
+        font-size: 1.2rem;
+    }
+
+    /* Contact Page */
+    .contact-page {
+        text-align: center;
+    }
+
+    .contact-text {
+        text-align: center;
+    }
+
+    .contact-image,
+    .contact-info {
+        max-width: 90%;
     }
 }
-/* --- MOBILE NAVIGATION FIX (does not change any colors) --- 
 
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
-}
-
-/* When screen is small 
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: block;
-    }
-
-    nav ul.nav-links {
-        display: none;           /* Hide menu only until clicked 
+/* ===================================
+   RESPONSIVE DESIGN - TABLET
+   =================================== */
+@media (min-width: 768px) {
+    .contact-page {
         flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: inherit;     /* Keeps your existing background color 
-        padding: 15px;
-        width: 200px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        text-align: center;
     }
 
-    nav ul.nav-links.active {
-        display: flex;           /* Show menu when hamburger clicked 
+    .contact-text {
+        margin-left: 1.5rem;
+        text-align: center;
     }
-}*/
+}
+
+@media (max-width: 992px) and (min-width: 769px) {
+    .sermon-intro {
+        gap: 2rem;
+    }
+}
