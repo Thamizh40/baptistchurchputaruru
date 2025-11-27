@@ -481,6 +481,8 @@ footer {
     max-width: 1200px;
     margin: auto;
    flex-direction: row;
+   padding: 20px;
+
 }
 
 .footer-section h4,
@@ -616,5 +618,6 @@ footer {
         gap: 2rem;
     }
 }
+
 
 
