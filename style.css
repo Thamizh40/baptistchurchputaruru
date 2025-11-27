@@ -480,10 +480,11 @@ footer {
     gap: 30px;
     max-width: 1200px;
     margin: auto;
+   flex-direction: row;
 }
 
-.footer-section h3,
-.footer-section h4 {
+.footer-section h4,
+.footer-section h5 {
     margin-bottom: 10px;
     color: gold;
     font-weight: 600;
@@ -615,4 +616,5 @@ footer {
         gap: 2rem;
     }
 }
+
 
