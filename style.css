@@ -485,6 +485,11 @@ footer {
 
 }
 
+ .footer-section{
+    padding-left: 20px;
+    padding-right: 20px;
+ }
+
 .footer-section h4,
 .footer-section h5 {
     margin-bottom: 10px;
@@ -618,6 +623,7 @@ footer {
         gap: 2rem;
     }
 }
+
 
 
 
