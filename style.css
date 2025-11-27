@@ -481,8 +481,6 @@ footer {
     max-width: 1200px;
     margin: auto;
    flex-direction: row;
-   padding: 40px;
-
 }
 
  .footer-section{
@@ -623,6 +621,7 @@ footer {
         gap: 2rem;
     }
 }
+
 
 
 
