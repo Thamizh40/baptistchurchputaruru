@@ -514,6 +514,7 @@ footer {
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
+padding-bottom: 10px;
     font-size: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -621,6 +622,7 @@ footer {
         gap: 2rem;
     }
 }
+
 
 
 
